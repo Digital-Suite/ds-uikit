@@ -2,7 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { Database, Search, X, Lock, Cpu, Zap, Cloud, Check } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3333';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || (import.meta.env.DEV ? 'https://dev-api.digitalsuite.tech' : 'https://api.digitalsuite.tech');
 
 const ICON_MAP = {
   Database,
