@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import * as Icons from 'lucide-react';
 
-export function SkillSelectorMenu({ skills, onSelect, onClose }) {
+export function SkillSelectorMenu({ skills, onSelect, onClose, className, style }) {
   const [search, setSearch] = useState('');
 
   const filteredSkills = useMemo(() => {
@@ -16,11 +16,12 @@ export function SkillSelectorMenu({ skills, onSelect, onClose }) {
 
   return (
     <div 
-      className="absolute bottom-full left-0 right-0 mb-3 bg-[var(--color-surface)] border rounded-2xl shadow-[0_-10px_40px_rgba(0,0,0,0.1)] overflow-hidden animate-page-enter flex flex-col"
+      className={className || "absolute bottom-full left-0 right-0 mb-3 bg-[var(--color-surface)] border rounded-2xl shadow-[0_-10px_40px_rgba(0,0,0,0.1)] overflow-hidden animate-page-enter flex flex-col"}
       style={{ 
         borderColor: 'var(--color-border)', 
         zIndex: 50, 
-        maxHeight: '50vh' 
+        maxHeight: '50vh',
+        ...style
       }}
     >
       {/* Header & Search */}

@@ -32,7 +32,7 @@ export const FALLBACK_MODELS = [
   { id: 'gemini-3.1-flash-lite', name: 'Gemini 3.1 Flash Lite', provider: 'Google AI', icon: 'Zap', color: '#3b82f6', requiresKey: 'geminiApiKey' },
 ];
 
-export function ModelSelectorMenu({ onSelect, onClose, selectedModel, excludeLocal }) {
+export function ModelSelectorMenu({ onSelect, onClose, selectedModel, excludeLocal, className, style }) {
   const [search, setSearch] = useState('');
   const [settings, setSettings] = useState({});
   const [models, setModels] = useState(FALLBACK_MODELS);
@@ -97,11 +97,12 @@ export function ModelSelectorMenu({ onSelect, onClose, selectedModel, excludeLoc
 
   return (
     <div 
-      className="absolute bottom-full left-12 mb-3 w-[340px] bg-[var(--color-surface)] border rounded-2xl shadow-[0_-10px_40px_rgba(0,0,0,0.2)] overflow-hidden animate-page-enter flex flex-col"
+      className={className || "absolute bottom-full left-12 mb-3 w-[340px] bg-[var(--color-surface)] border rounded-2xl shadow-[0_-10px_40px_rgba(0,0,0,0.2)] overflow-hidden animate-page-enter flex flex-col"}
       style={{ 
         borderColor: 'var(--color-border)', 
         zIndex: 50, 
-        maxHeight: '400px' 
+        maxHeight: '400px',
+        ...style
       }}
     >
       {/* Header & Search */}
