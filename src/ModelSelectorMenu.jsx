@@ -2,8 +2,6 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { Database, Search, X, Lock, Cpu, Zap, Cloud, Check } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || (import.meta.env.DEV ? 'https://dev-api.digitalsuite.tech' : 'https://api.digitalsuite.tech');
-
 const ICON_MAP = {
   Database,
   Cpu,
@@ -32,37 +30,18 @@ export const FALLBACK_MODELS = [
   { id: 'gemini-3.1-flash-lite', name: 'Gemini 3.1 Flash Lite', provider: 'Google AI', icon: 'Zap', color: '#3b82f6', requiresKey: 'geminiApiKey' },
 ];
 
-export function ModelSelectorMenu({ onSelect, onClose, selectedModel, excludeLocal, className, style }) {
+export function ModelSelectorMenu({ models: propModels, onSelect, onClose, selectedModel, excludeLocal, className, style, isLoading }) {
   const [search, setSearch] = useState('');
   const [settings, setSettings] = useState({});
-  const [models, setModels] = useState(FALLBACK_MODELS);
-  const [isLoading, setIsLoading] = useState(true);
   const navigate = useNavigate();
+
+  const models = propModels || FALLBACK_MODELS;
 
   useEffect(() => {
     try {
       const stored = localStorage.getItem('digital_suite_settings');
       if (stored) setSettings(JSON.parse(stored));
     } catch {}
-  }, []);
-
-  useEffect(() => {
-    const fetchModels = async () => {
-      try {
-        const response = await fetch(`${API_BASE_URL}/api/v1/system/ai-models`);
-        if (response.ok) {
-          const data = await response.json();
-          setModels(data);
-        } else {
-          console.error("Failed to fetch models, using fallback");
-        }
-      } catch (e) {
-        console.error("Error fetching models, using fallback", e);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-    fetchModels();
   }, []);
 
   const hasKey = (model) => {
