@@ -1,9 +1,8 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { Database, Search, X, Lock, Cpu, Zap, Cloud, Check } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import config from '../../config';
 
-const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL || config.apiBaseUrl) || 'http://localhost:3333';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3333';
 
 const ICON_MAP = {
   Database,
