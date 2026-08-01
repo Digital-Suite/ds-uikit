@@ -1,6 +1,6 @@
 {
   "name": "@digital-suite/ui-kit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Digital Suite UI Toolkit",
   "main": "src/index.js",
   "type": "module",
