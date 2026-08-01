@@ -1,55 +1,49 @@
-/* Digital Suite Global Theme Variables */
+/* Digital Suite Global Theme Variables (RGB triplets for Tailwind opacity support) */
 
 :root, .dark {
   /* Brand */
-  --color-primary:        #40b355;
-  --color-primary-dark:   #339944;
-  --color-primary-light:  #6dcb80;
-  --color-primary-subtle: rgba(64, 179, 85, 0.1);
-  --color-primary-glow:   rgba(64, 179, 85, 0.18);
+  --color-primary:        64 179 85;      /* #40b355 */
+  --color-primary-dark:   51 153 68;      /* #339944 */
+  --color-primary-light:  109 203 128;    /* #6dcb80 */
 
-  --color-accent:         #0ea5e9;
-  --color-accent-subtle:  rgba(14, 165, 233, 0.1);
+  --color-accent:         14 165 233;     /* #0ea5e9 */
 
   /* Backgrounds */
-  --color-bg:             #0e0e0e;
-  --color-surface:        #151515;
-  --color-surface-raised: #1e1e1e;
-  --color-black:          #0a0a0a;
+  --color-bg:             14 14 14;       /* #0e0e0e */
+  --color-surface:        21 21 21;       /* #151515 */
+  --color-surface-raised: 30 30 30;       /* #1e1e1e */
+  --color-black:          10 10 10;       /* #0a0a0a */
 
   /* Borders */
-  --color-border:         #2a2a2a;
-  --color-border-subtle:  #222222;
+  --color-border:         42 42 42;       /* #2a2a2a */
+  --color-border-subtle:  34 34 34;       /* #222222 */
 
   /* Typography */
-  --color-text:           #f0f0f0;
-  --color-text-muted:     #9ca3af;
-  --color-text-faint:     #6b7280;
+  --color-text:           240 240 240;    /* #f0f0f0 */
+  --color-text-muted:     156 163 175;    /* #9ca3af */
+  --color-text-faint:     107 114 128;    /* #6b7280 */
 }
 
 .light {
   /* Brand */
-  --color-primary:        #40b355;
-  --color-primary-dark:   #339944;
-  --color-primary-light:  #6dcb80;
-  --color-primary-subtle: rgba(64, 179, 85, 0.1);
-  --color-primary-glow:   rgba(64, 179, 85, 0.18);
+  --color-primary:        64 179 85;
+  --color-primary-dark:   51 153 68;
+  --color-primary-light:  109 203 128;
 
-  --color-accent:         #0ea5e9;
-  --color-accent-subtle:  rgba(14, 165, 233, 0.1);
+  --color-accent:         14 165 233;
 
   /* Backgrounds */
-  --color-bg:             #f9fafb;
-  --color-surface:        #ffffff;
-  --color-surface-raised: #f3f4f6;
-  --color-black:          #ffffff;
+  --color-bg:             249 250 251;    /* #f9fafb */
+  --color-surface:        255 255 255;    /* #ffffff */
+  --color-surface-raised: 243 244 246;    /* #f3f4f6 */
+  --color-black:          255 255 255;
 
   /* Borders */
-  --color-border:         #e5e7eb;
-  --color-border-subtle:  #f3f4f6;
+  --color-border:         229 231 235;    /* #e5e7eb */
+  --color-border-subtle:  243 244 246;    /* #f3f4f6 */
 
   /* Typography */
-  --color-text:           #111827;
-  --color-text-muted:     #6b7280;
-  --color-text-faint:     #9ca3af;
+  --color-text:           17 24 39;       /* #111827 */
+  --color-text-muted:     107 114 128;    /* #6b7280 */
+  --color-text-faint:     156 163 175;    /* #9ca3af */
 }

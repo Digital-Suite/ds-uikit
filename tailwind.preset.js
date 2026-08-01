@@ -2,26 +2,23 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: 'var(--color-primary)',
-        'primary-dark': 'var(--color-primary-dark)',
-        'primary-light': 'var(--color-primary-light)',
-        'primary-subtle': 'var(--color-primary-subtle)',
-        'primary-glow': 'var(--color-primary-glow)',
+        primary: 'rgb(var(--color-primary) / <alpha-value>)',
+        'primary-dark': 'rgb(var(--color-primary-dark) / <alpha-value>)',
+        'primary-light': 'rgb(var(--color-primary-light) / <alpha-value>)',
         
-        accent: 'var(--color-accent)',
-        'accent-subtle': 'var(--color-accent-subtle)',
+        accent: 'rgb(var(--color-accent) / <alpha-value>)',
 
-        bg: 'var(--color-bg)',
-        surface: 'var(--color-surface)',
-        'surface-raised': 'var(--color-surface-raised)',
-        black: 'var(--color-black)',
+        bg: 'rgb(var(--color-bg) / <alpha-value>)',
+        surface: 'rgb(var(--color-surface) / <alpha-value>)',
+        'surface-raised': 'rgb(var(--color-surface-raised) / <alpha-value>)',
+        black: 'rgb(var(--color-black) / <alpha-value>)',
 
-        border: 'var(--color-border)',
-        'border-subtle': 'var(--color-border-subtle)',
+        border: 'rgb(var(--color-border) / <alpha-value>)',
+        'border-subtle': 'rgb(var(--color-border-subtle) / <alpha-value>)',
 
-        text: 'var(--color-text)',
-        'text-muted': 'var(--color-text-muted)',
-        'text-faint': 'var(--color-text-faint)',
+        text: 'rgb(var(--color-text) / <alpha-value>)',
+        'text-muted': 'rgb(var(--color-text-muted) / <alpha-value>)',
+        'text-faint': 'rgb(var(--color-text-faint) / <alpha-value>)',
       },
     }
   }
